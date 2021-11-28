@@ -50,7 +50,7 @@ router.get("", async (req, res)=>{
             },
         };
     });
-    res.status(200).send(reply);
+    res.status(200).header("Access-Control-Allow-Origin","*").send(reply);
 });
 
 router.get("/photos",async (req, res)=>{
@@ -83,7 +83,7 @@ router.get("/photos",async (req, res)=>{
             },
         };
     });
-    res.status(200).send(reply);
+    res.status(200).header("Access-Control-Allow-Origin","*").send(reply);
 });
 
 module.exports = router;
